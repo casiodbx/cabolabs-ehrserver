@@ -160,6 +160,11 @@
                     <g:link controller="personIdType" action="index" class="${(controllerName=='personIdType')?'active':''}"><i class="glyphicon glyphicon glyphicon-tag"></i> <g:message code="desktop.idTypes" /></g:link>
                   </li>
                   </sec:ifAnyGranted>
+                  <sec:ifAnyGranted roles="ROLE_ADMIN">
+					  <li>
+					    <g:link controller="versionedComposition" action="index" class="${(controllerName=='versionedComposition')?'active':''}"><i class="glyphicon glyphicon-th-list"></i> <g:message code="desktop.versionedComposition" /></g:link>
+					  </li>
+					</sec:ifAnyGranted>
 	             </ul>
 	           </div>
 	           <!-- /.sidebar-collapse -->
